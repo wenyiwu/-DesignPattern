@@ -23,3 +23,4 @@ public class Seriable implements Serializable {
         return INSTANCE;
     }
 }
+
