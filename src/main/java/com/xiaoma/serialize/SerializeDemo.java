@@ -7,7 +7,7 @@ public class SerializeDemo {
     public static void main(String[] args) {
         SerializePerson();
 
-//        Person.height = 190;
+//        Son.height = 190;
 //
 //        DeSerializePerson();
     }
@@ -15,7 +15,7 @@ public class SerializeDemo {
     private static void SerializePerson() {
         try {
             ObjectOutputStream outputStream = new ObjectOutputStream(new FileOutputStream(new File("person")));
-            Person person = new Person();
+            People person = new People();
             person.setAge(22);
             person.setName("wenyiwu");
             outputStream.writeObject(person);
@@ -23,13 +23,13 @@ public class SerializeDemo {
 
             ObjectInputStream inputStream = new ObjectInputStream(new FileInputStream(new File("person")));
 
-            Person person1 = (Person) inputStream.readObject();
+            People person1 = (People) inputStream.readObject();
             System.out.println("person1.name = " + person1.getName());
             person.setName("wanghui");
             System.out.println("person1.name = " + person1.getName());
             outputStream.writeObject(person);
             outputStream.flush();
-            Person person2 = (Person) inputStream.readObject();
+            People person2 = (People) inputStream.readObject();
             System.out.println("person2.name = " + person2.getName());
             System.out.println(person1);
             System.out.println(person2);
@@ -44,7 +44,7 @@ public class SerializeDemo {
     private static void DeSerializePerson() {
         try {
             ObjectInputStream inputStream = new ObjectInputStream(new FileInputStream(new File("person")));
-            Person person = (Person) inputStream.readObject();
+            People person = (People) inputStream.readObject();
             System.out.println(person.getName() + " : " + person.getAge() + " : " + person.height);
         } catch (IOException e) {
             e.printStackTrace();

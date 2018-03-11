@@ -1,16 +1,15 @@
 package com.xiaoma.serialize.json;
 
 import com.alibaba.fastjson.JSON;
-import com.alibaba.fastjson.JSONObject;
-import com.xiaoma.serialize.Person;
+import com.xiaoma.serialize.People;
 import org.codehaus.jackson.map.ObjectMapper;
 
 import java.io.IOException;
 
 public class JsonDemo {
 
-    private static Person init() {
-        Person person = new Person();
+    private static People init() {
+        People person = new People();
         person.setName("wenyiwu");
         person.setAge(22);
         return person;
@@ -25,22 +24,22 @@ public class JsonDemo {
     }
 
     private static void executeWithJack() throws IOException {
-        Person person = init();
+        People person = init();
 
         ObjectMapper mapper = new ObjectMapper();
         byte[] writeBytr = null;
 
         writeBytr = mapper.writeValueAsBytes(person);
-        Person person1 = mapper.readValue(writeBytr, Person.class);
+        People person1 = mapper.readValue(writeBytr, People.class);
     }
 
 
     private static void executeWithFastJson() throws IOException {
-        Person person = init();
+        People person = init();
 
         String text = JSON.toJSONString(person);
 
 
-        Person person1 = JSON.parseObject(text, Person.class);
+        People person1 = JSON.parseObject(text, People.class);
     }
 }

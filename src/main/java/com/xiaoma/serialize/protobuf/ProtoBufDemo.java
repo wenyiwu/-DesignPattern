@@ -1,9 +1,7 @@
 package com.xiaoma.serialize.protobuf;
 
-import com.alibaba.fastjson.JSON;
 import com.baidu.bjf.remoting.protobuf.Codec;
 import com.baidu.bjf.remoting.protobuf.ProtobufProxy;
-import com.xiaoma.serialize.Person;
 
 import java.io.IOException;
 

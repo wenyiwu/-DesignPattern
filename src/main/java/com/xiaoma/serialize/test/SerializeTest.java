@@ -1,6 +1,5 @@
 package com.xiaoma.serialize.test;
 
-import com.xiaoma.serialize.Person;
 import com.xiaoma.serialize.parent.User;
 import org.junit.jupiter.api.Test;
 
