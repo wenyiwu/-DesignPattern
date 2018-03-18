@@ -25,7 +25,7 @@ public class SerializeDemo {
 
             People person1 = (People) inputStream.readObject();
             System.out.println("person1.name = " + person1.getName());
-            person.setName("wanghui");
+            person1.setName("wanghui");
             System.out.println("person1.name = " + person1.getName());
             outputStream.writeObject(person);
             outputStream.flush();

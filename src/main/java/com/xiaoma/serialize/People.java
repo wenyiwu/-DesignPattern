@@ -5,7 +5,7 @@ import java.io.Serializable;
 public class People implements Serializable{
 
 
-    private static final long serialVersionUID = -1945036227480710390L;
+    //private static final long serialVersionUID = -1945036227480710390L;
 
     private String name;
 
